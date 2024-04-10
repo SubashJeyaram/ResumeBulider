@@ -1,0 +1,27 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+
+    var id=$("#user_id").val();
+    // alert(id);
+
+    $("#btnDownload").click(function(){
+      // alert("working");
+
+      $.ajax({
+        url:"http://127.0.0.1:8000/resume/download_pdf/"+id,
+        method:"get",
+        success:function(response){
+
+        }
+      });
+
+    });
+
+
+
+});
+
+</script>
